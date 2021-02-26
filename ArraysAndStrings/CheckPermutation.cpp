@@ -49,6 +49,39 @@ bool check_permutation1(string str1, string str2){
 */
 	return true;
 }
+//Creating a array of int and incrementing the values as many times the character apperes and compare them in the end.
+bool check_permutation2(string str1, string str2){
+	int len1 = str1.length();
+	int len2 = str2.length();
+	int count1[25] = {0};
+	int count2[25] = {0};
+	if(len1 != len2){
+		cout << "String are of different length " << endl;
+		return false;	
+	}
+	for(int i=0; i<len1; i++){
+		int temp = str1[i] - 'a';
+		count1[temp]++;
+		
+	}
+	for(int i : count1){ cout << i << " " ;}
+	cout << endl;
+	for(int i=0; i<len2; i++){
+		int temp = str2[i] - 'a';
+		count2[temp]++;
+	}
+	for(int i : count2){ cout << i << " " ;}
+	cout << endl;
+	for(int i=0; i<26; i++){
+		if(count1[i] != count2[i]){
+			cout << "Value of I is " << i << endl;
+			return false;
+		}
+	}
+	return true;		
+}
+
+
 
 int main(){
 	string str1 , str2;
@@ -56,7 +89,7 @@ int main(){
 	cin >> str1;
 	cout << "Enter the string 2 :: " << endl;
 	cin >> str2;
-	if(check_permutation1(str1, str2)){
+	if(check_permutation2(str1, str2)){
 		cout << "They are permutation of each other" << endl;
 	} else
 		cout << "They are not permutation of each other" << endl;
