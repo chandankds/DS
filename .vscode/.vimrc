@@ -66,7 +66,8 @@ inoremap {} {}
 filetype on
 filetype indent on
 syntax enable
-autocmd BufNewFile *.cpp execute "0r ~/.vim/template/".input("Template name: ").".cpp"
+"autocmd BufNewFile *.cpp execute "0r ~/.vim/template/".input("Template name: ").".cpp"
+autocmd BufNewFile *.cpp -r ~/.vim/template.cpp
 autocmd vimEnter *.cpp map <F8> :w <CR> :!clear ; g++ %; if [ -f a.exe ]; then time ./a.exe; rm a.exe; fi <CR>
 "map <F9> :!g++ % -o %:r && ./%:r <CR>
 map <F5> :!g++ -g % -o %:r <CR>
