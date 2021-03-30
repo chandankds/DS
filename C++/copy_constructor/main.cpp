@@ -51,7 +51,7 @@ int main(){
 //	Person nandan(chandan);
   	Person nandan = chandan;
 	nandan.print();
-	*pt = 20;
+//	*pt = 20;
 	chandan.set("chs", 50, pt);
 	nandan.print();
 	return 0;
