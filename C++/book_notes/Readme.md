@@ -1,0 +1,1 @@
+Here i will try to keep the notes of the book i read. Flash cards were one option i have to explore but i belive for books this is the better way i will make flash cards for datastructure and algorithms.
